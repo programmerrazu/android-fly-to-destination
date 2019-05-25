@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:card_view = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:id = "@+id/cardView_tc"
+    android:layout_width = "wrap_content"
+    android:layout_height = "wrap_content"
+    android:layout_gravity = "center"
+    android:layout_margin="8dp"
+    android:background = "#FFFFFF"
+    card_view:cardCornerRadius = "4dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+        <ImageButton
+            android:id = "@+id/cross_btn"
+            style = "@style/Button.Accent.Borderless"
+            android:layout_width = "35dp"
+            android:layout_height = "35dp"
+            android:layout_marginTop = "8dp"
+            android:layout_marginEnd = "8dp"
+            android:layout_marginBottom = "8dp"
+            android:gravity = "center"
+            android:src = "@drawable/ic_access_denied"
+            android:textColor = "@color/grey_700"
+            android:textSize = "16dp"
+            android:tint = "@color/grey_500"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintVertical_bias = "0.0" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id = "@+id/user_profile_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart = "8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd = "8dp"
+            android:fontFamily = "@font/sf_pro_text"
+            app:civ_border = "true"
+            android:background = "@drawable/border"
+            android:padding = "2dp"
+            android:src = "@drawable/user_img"
+            app:civ_border_color = "@color/mdtp_white"
+            app:civ_border_width = "2dp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+        <TextView
+            android:id = "@+id/user_name"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "8dp"
+            android:layout_marginEnd = "8dp"
+            android:gravity = "center"
+            android:fontFamily="@font/sf_pro_text"
+            android:text = "Kara Fara"
+            android:textColor = "#464646"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHorizontal_bias = "1.0"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/user_profile_pic" />
+
+        <TextView
+            android:id = "@+id/travelingTo"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "8dp"
+            android:layout_marginTop = "4dp"
+            android:layout_marginEnd = "8dp"
+            android:layout_marginBottom = "8dp"
+            android:gravity = "center"
+            android:fontFamily="@font/sf_pro_text"
+            android:text = "traveling to dhaka"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/user_name" />
+
+        <Button
+            android:id="@+id/connect_and_chat_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#B12C3F"
+            android:fontFamily="@font/sf_pro_text"
+            android:text="Instant Connect"
+            android:textColor="@color/mdtp_white"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/travelingTo" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

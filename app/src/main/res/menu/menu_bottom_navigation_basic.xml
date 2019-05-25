@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_start_trip"
+        android:icon="@drawable/ic_add_circle_black_24dp"
+        android:title="Start Trip" />
+
+    <item
+        android:id="@+id/navigation_find_trips"
+        android:icon="@drawable/ic_world"
+        android:title="Find Trips" />
+
+    <item
+        android:id="@+id/navigation_Discover"
+        android:icon="@drawable/ic_multiple_users_silhouette"
+        android:title="Discover" />
+
+    <item
+        android:id="@+id/navigation_splits"
+        android:icon="@drawable/ic_attach_money_black_24dp"
+        android:title="Splits" />
+
+</menu>

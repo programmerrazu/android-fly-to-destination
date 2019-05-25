@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1094052461321",
+    "firebase_url": "https://gaffl-234006.firebaseio.com",
+    "project_id": "gaffl-234006",
+    "storage_bucket": "gaffl-234006.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094052461321:android:ed3265a9df7047b8",
+        "android_client_info": {
+          "package_name": "com.gogaffl.gaffl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094052461321-5muqb6mkb47o75ur9vn927v9a9umt9nq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gogaffl.gaffl",
+            "certificate_hash": "8fc1e9446421c227301a47d14039ca93caf1ccc0"
+          }
+        },
+        {
+          "client_id": "1094052461321-tmioeds6e8ok9j5tqnarbfqva7nshjqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCBCdr8rf2omDT7RBCIRf6763Wl6fnu10"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094052461321-tmioeds6e8ok9j5tqnarbfqva7nshjqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

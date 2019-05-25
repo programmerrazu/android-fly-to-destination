@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/consLayoutg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gaffl_pic_dark">
+
+        <Button
+            android:id="@+id/close_button_login_choice"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/ic_keyboard_arrow_left"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            android:weightSum="7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.659">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="2"
+                android:src="@drawable/gaffl_white_icon" />
+
+            <Button
+                android:id="@+id/login_google_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rounded_white"
+                android:drawableLeft="@drawable/ic_google"
+                android:fontFamily="@font/sf_pro_text"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:text="Continue with Google"
+                android:textAllCaps="false"
+                android:textColor="@color/red_700"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/login_facebook_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rounded_white"
+                android:drawableLeft="@drawable/ic_facebook"
+                android:fontFamily="@font/sf_pro_text"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:text="  Continue with Facebook"
+                android:textAllCaps="false"
+                android:textColor="@color/red_700"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/login_linkedin_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rounded_white"
+                android:drawableLeft="@drawable/ic_linkedin_clr"
+                android:fontFamily="@font/sf_pro_text"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:text="Continue with Linkedin"
+                android:textAllCaps="false"
+                android:textColor="@color/red_700"
+                android:textSize="18sp" />
+
+            <!--<Button-->
+                <!--android:id="@+id/login_insta_button"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_marginStart="25dp"-->
+                <!--android:layout_marginEnd="25dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/btn_rounded_white"-->
+                <!--android:drawableLeft="@drawable/ic_instagram"-->
+                <!--android:fontFamily="@font/sf_pro_text"-->
+                <!--android:paddingStart="30dp"-->
+                <!--android:paddingEnd="30dp"-->
+                <!--android:text="  Continue with Instagram"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/red_700"-->
+                <!--android:textSize="18sp" />-->
+
+            <Button
+                android:id="@+id/login_email_button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rounded_indigo_outline"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/sf_pro_text"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:text="Continue with Email"
+                android:textAllCaps="false"
+                android:textColor="@color/mdtp_white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

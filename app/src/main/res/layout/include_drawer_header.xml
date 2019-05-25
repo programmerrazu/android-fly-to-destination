@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height = "200dp"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:layout_marginBottom = "8dp"
+        android:scaleType = "centerCrop"
+        android:src = "@drawable/materialbg3"
+        app:layout_constraintBottom_toBottomOf = "parent" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id = "@+id/avatar_drawer"
+        android:layout_width = "80dp"
+        android:layout_height = "80dp"
+        android:layout_alignParentStart = "true"
+        android:layout_alignParentTop = "true"
+        android:layout_alignParentEnd = "true"
+        android:layout_marginStart = "8dp"
+        android:layout_marginEnd = "8dp"
+        android:layout_marginBottom = "8dp"
+        android:src = "@drawable/photo_male_6"
+        app:civ_border_width = "2dp"
+        app:civ_shadow = "true"
+        app:civ_shadow_radius = "0"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintHorizontal_bias = "0.025"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintVertical_bias = "0.351" />
+
+    <LinearLayout
+        android:id = "@+id/linear"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@+id/avatar"
+        android:layout_alignParentBottom = "true"
+        android:layout_marginStart = "16dp"
+        android:layout_marginTop = "8dp"
+        android:layout_marginEnd = "8dp"
+        android:orientation = "vertical"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintHorizontal_bias = "0.0"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintVertical_bias = "0.727">
+
+        <TextView
+            android:id = "@+id/user_name_drawer"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "John Miller"
+            android:textAppearance = "@style/TextAppearance.AppCompat.Body2" />
+
+        <TextView
+            android:id = "@+id/email_drawer"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "johnmiller@mail.com"
+            android:textAppearance = "@style/TextAppearance.AppCompat.Body1" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

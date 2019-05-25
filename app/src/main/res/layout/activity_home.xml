@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:id = "@+id/container"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    tools:context = "com.gogaffl.gaffl.home.view.HomeActivity">
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id = "@+id/drawer_layout"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        tools:openDrawer = "start">
+
+        <include layout = "@layout/content_home_layout" />
+
+        <!--navigation drawer menu-->
+        <android.support.design.widget.NavigationView
+            android:id = "@+id/nav_view"
+            android:layout_width = "260dp"
+            android:layout_height = "match_parent"
+            android:layout_gravity = "start"
+            android:background = "@color/colorGafflDeepRed"
+            android:fitsSystemWindows = "true"
+            android:paddingTop = "@dimen/spacing_large"
+            app:headerLayout = "@layout/include_drawer_header"
+            app:itemIconTint = "@color/mdtp_white"
+            app:itemTextAppearance = "@style/TextAppearance.AppCompat.Subhead"
+            app:itemTextColor = "@color/grey_10"
+            app:menu = "@menu/menu_navigation_drawer_news"
+            app:theme = "@style/Drawer.Custom.Dark" />
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

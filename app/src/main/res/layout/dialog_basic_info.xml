@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:backgroundTint="@color/colorGafflDeepRed">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/bt_close"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding = "16dp"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_close"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/sf_pro_text"
+                android:text="Basic Information"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/white" />
+
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f7f8fb"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_large">
+
+                <TextView
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginLeft = "@dimen/spacing_xsmall"
+                    android:fontFamily = "@font/sf_pro_text"
+                    android:paddingStart = "4dp"
+                    android:text = "Location"
+                    android:textAppearance = "@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:textColor = "@color/grey_60" />
+
+                <View
+                    android:layout_width = "match_parent"
+                    android:layout_height = "6dp" />
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal">
+
+                    <Spinner
+                        android:id = "@+id/country_spinner"
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_weight = "1"
+                        android:minHeight = "40dp"
+                        android:spinnerMode = "dropdown" />
+
+                    <Spinner
+                        android:id = "@+id/state_spinner"
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_weight = "1"
+                        android:minHeight = "40dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width = "match_parent"
+                    android:layout_height = "8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xsmall"
+                    android:paddingStart="4dp"
+                    android:text = "Birth Date"
+                    android:fontFamily="@font/sf_pro_text"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_60" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height = "6dp" />
+
+                <TextView
+                    android:id = "@+id/datetv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background = "@drawable/edit_text_bg"
+                    android:focusable = "false"
+                    android:fontFamily="@font/sf_pro_text"
+                    android:hint = "YY/MM/DD"
+                    android:padding = "8dp"
+                    android:paddingStart = "8dp"
+                    android:textColor = "@color/grey_700"
+                    android:textColorHint = "@color/grey_80"
+                    android:textSize = "18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xsmall"
+                    android:paddingStart="4dp"
+                    android:text="Gender"
+                    android:fontFamily="@font/sf_pro_text"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_60" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height = "6dp" />
+
+                <RadioGroup
+                    android:id="@+id/sex_group_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                    <RadioButton
+                        android:id="@+id/male_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_button_style"
+                        android:backgroundTint="@color/colorGafflDeepRed"
+                        android:button="@android:color/transparent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/sf_pro_text"
+                        android:gravity="center"
+                        android:text = "male"
+                        android:textAllCaps="false"
+                        android:textColor = "@drawable/button_select_color_change"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold"
+                        app:layout_constraintEnd_toEndOf = "parent"
+                        app:layout_constraintStart_toStartOf = "parent"
+                        app:layout_constraintTop_toBottomOf = "@+id/male_button" />
+
+                    <RadioButton
+                        android:id="@+id/female_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_button_style"
+                        android:backgroundTint="@color/colorGafflDeepRed"
+                        android:button="@android:color/transparent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/sf_pro_text"
+                        android:gravity="center"
+                        android:text="female"
+                        android:textAllCaps="false"
+                        android:textColor = "@drawable/button_select_color_change"
+                        android:textSize = "16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/male_button" />
+
+                    <RadioButton
+                        android:id="@+id/other_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_button_style"
+                        android:backgroundTint="@color/colorGafflDeepRed"
+                        android:button="@android:color/transparent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/sf_pro_text"
+                        android:gravity="center"
+                        android:text="Other"
+                        android:textAllCaps="false"
+                        android:textColor = "@drawable/button_select_color_change"
+                        android:textSize = "16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/female_button" />
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+
+                <Button
+                    android:id="@+id/bt_save"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="@color/mdtp_white"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/spacing_xsmall"
+                    android:paddingRight="@dimen/spacing_xsmall"
+                    android:text="@string/SAVE"
+                    android:textColor="@android:color/holo_green_light" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

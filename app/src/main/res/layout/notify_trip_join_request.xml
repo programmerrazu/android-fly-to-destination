@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="24dp">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/itemContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            android:layout_marginBottom=".5dp"
+
+            >
+
+            <LinearLayout
+                style="@style/Widget.CardContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgPerson"
+                        android:layout_width="@dimen/list_item_avatar_size"
+                        android:layout_height="@dimen/list_item_avatar_size"
+                        android:layout_marginRight="16dp"
+                        android:src="@mipmap/ic_launcher_round"
+                        app:civ_border_color="#FFFFFFFF"
+                        app:civ_border_width="2dp" />
+
+                    <LinearLayout
+                        android:id="@+id/personTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imgPerson"
+                        android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/tvTitleNotifyTripJoinRequest"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="3"
+                                android:text="Abdul" />
+
+
+
+                        <TextView
+                            android:id="@+id/tvNotifyTripJoinRequestTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apr 15,06.52pm"
+                            android:layout_marginBottom="15dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                        <TextView
+                            android:id="@+id/tvRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:drawableLeft="@drawable/ic_star_black_24dp"
+                            android:drawablePadding="2dp"
+                            android:text="Rating:5.0(4 Reviews)" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_public_black_24dp"
+                            android:drawablePadding="2dp"
+                            android:maxLines="2"
+                            android:text="From Dhaka,Bangladesh" />
+
+                        <TextView
+                            android:id="@+id/tvAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_information"
+                            android:drawablePadding="2dp"
+                            android:text="Age 24, Male" />
+
+                        <TextView
+                            android:id="@+id/tvInterests"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_interests"
+                            android:drawablePadding="2dp"
+                            android:text="Interest:Technology,Movies,Music" />
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+                            android:drawablePadding="2dp"
+                            android:text="Email address verified" />
+
+                        <TextView
+                            android:id="@+id/tvGoogle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+                            android:drawablePadding="2dp"
+                            android:text="Google verified" />
+
+                        <TextView
+                            android:id="@+id/tvFacebook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+                            android:drawablePadding="2dp"
+                            android:text="Facebook verified" />
+
+                        <TextView
+                            android:id="@+id/tvLinkedin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+                            android:drawablePadding="2dp"
+                            android:text="Linkedin verified" />
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+                            android:drawablePadding="2dp"
+                            android:text="Phone verified" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvNoteUser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Note from Abdul:"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvNote"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Note from Abdul:Note from Abdul:Note from Abdul:Note from Abdul:" />
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                     android:id="@+id/btnContainer"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/personTitle"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvConnectChat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/btn_chat_outline"
+                            android:backgroundTint="#B83F50"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="5dp"
+                            android:text="Connect &amp; Chat"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/tvCancelled"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/btn_chat_outline"
+                            android:gravity="center"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="5dp"
+                            android:text="Cancelled"
+                            android:textAllCaps="false"
+                            android:textColor="#333333" />
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/viewLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/btnContainer"
+                        android:layout_marginTop="10dp"
+                        android:background="#E0E0E0" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

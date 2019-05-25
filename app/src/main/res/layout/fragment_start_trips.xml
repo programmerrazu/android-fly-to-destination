@@ -1,0 +1,184 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="8dp"
+            tools:ignore="UnusedAttribute">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp">
+
+
+                <ImageView
+                    android:id="@+id/imgRoadTrip"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="apple image"
+                    android:tint="#4A4A4A"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_directions_car_black_24dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textRoadTrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgRoadTrip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Road Trip"
+                    android:textColor="#4A4A4A" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="8dp"
+            tools:ignore="UnusedAttribute">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:id="@+id/imgAdventureTravel"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:tint="#4A4A4A"
+                    android:layout_centerInParent="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="apple image"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_adventure"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textAdventureTravel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgAdventureTravel"
+                    android:layout_centerHorizontal="true"
+                    android:text="Adventure Travel"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4A4A4A" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_explore_cities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="8dp"
+            tools:ignore="UnusedAttribute">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp">
+
+                <ImageView
+                    android:id="@+id/imgExploreCities"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="apple image"
+                    android:scaleType="fitXY"
+                    android:tint="#4A4A4A"
+                    android:src="@drawable/ic_location_city_black_24dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textExploreCities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgExploreCities"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Road Trip"
+                    android:textColor="#4A4A4A" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_airport_layovers"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="8dp"
+            tools:ignore="UnusedAttribute">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp">
+
+
+                <ImageView
+                    android:id="@+id/imgAirportLayovers"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="apple image"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_blackplane"
+                    android:tint="#4A4A4A"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textimgAirportLayovers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgAirportLayovers"
+                    android:layout_centerHorizontal="true"
+                    android:text="Airport Layovers"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4A4A4A" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

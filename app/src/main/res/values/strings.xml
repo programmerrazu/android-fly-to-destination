@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">GAFFL</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--<string name = "google_maps_key" templateMergeStrategy = "preserve" translatable = "false">-->
+    <!--AIzaSyCbNPy5hqDEQFNNRXXXXXXXXXXXXXXXXXXX-->
+    <!--</string>-->
+
+    <string name="step_of">Step %1$d of %2$d</string>
+    <string name="section_format">Section : %1$d</string>
+    <string name="forgot_password_header">Forgot your password?</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_text">Google</string>
+    <string name="password_warning">Your password must be 6 characters long</string>
+    <string name="age_warning">You must be at-least 18 years old to use GAFFL. (Others won\'t see your birthday) </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_name_hint">John</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">1e51e4565ade88978b0df74890d38d6e</string>
+    <!-- TODO(user): replace with your real server client ID -->
+    <!-- Server Client ID.  This should be a valid Web OAuth 2.0 Client ID obtained
+         from https://console.developers.google.com/ -->
+    <string name="server_client_id">1094052461321-5muqb6mkb47o75ur9vn927v9a9umt9nq.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">2131654843583801</string>
+    <string name="fb_login_protocol_scheme">fb2131654843583801</string>
+    <!--<string name="facebook_app_id">221812691328632</string>-->
+    <!--<string name="fb_login_protocol_scheme">509cd0e04183e3b5f8444fa2d42cbf77</string>-->
+
+
+    <string name="label_phone_auth">Phone Number Authentication</string>
+    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
+    <string name="hint_user_id">User ID</string>
+    <string name="get_custom_token">Get Token</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="send_link">Send Link</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="loading">Loading…</string>
+    <string name="custom_token">Custom Token</string>
+    <string name="token_null">Token: null</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="start_phone_auth">Start</string>
+    <string name="verify_phone_auth">Verify</string>
+    <string name="resend_phone_auth">Resend</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_verification_code">Verification Code</string>
+    <string name="status_code_sent">Code Sent</string>
+    <string name="status_verification_failed">Verification failed</string>
+    <string name="status_verification_succeeded">Verification succeeded</string>
+    <string name="status_sign_in_failed">Sign-in failed</string>
+    <string name="instant_validation">(instant validation)</string>
+    <string name="earn"> <u>Earn</u></string>
+    <string name="connect_chat">Connect &amp; Chat</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue     cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian     bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber     cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese     the big cheese.</string>
+    <string name="bill_info">"<b>"Taylor"</b>" has added a new bill of $10.0 USD for "<b><u>"check notification"</u></b>". You owe $5.0 USD to Taylor.</string>
+
+    <string name="LongMsg">This is a notification style that can contain a large amount of text. It works really well when you have a large amount of information
+    to display in the notification area and want the user to be able to expand the message to see all of the content.</string>
+    <string name="title_activity_dialog">DialogActivity</string>
+    <string name="default_notification_channel_id">MY_NOTIFICATION</string>
+</resources>

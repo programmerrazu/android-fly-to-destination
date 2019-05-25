@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginBottom="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/trip_owner_profile_pic_second"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart = "16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_pro_text"
+        android:background = "@drawable/border"
+        android:src = "@drawable/user_img"
+        app:civ_border = "true"
+        app:civ_border_color = "@color/mdtp_white"
+        app:civ_border_width = "2dp"
+        android:padding = "2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trip_owner_about"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/sf_pro_text"
+        android:maxLines="4"
+        android:text="@string/long_lorem_ipsum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toEndOf="@+id/trip_owner_profile_pic_second"
+        app:layout_constraintTop_toBottomOf="@+id/title_user" />
+
+    <TextView
+        android:id="@+id/trip_owner_contact_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Contact: +XX  XXX-XXX-XXXX"
+        android:textSize="16sp"
+        android:fontFamily="@font/sf_pro_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/trip_owner_profile_pic_second"
+        app:layout_constraintTop_toBottomOf="@+id/trip_owner_about" />
+
+    <RatingBar
+        android:id = "@+id/myRatingBar"
+        style = "?android:attr/ratingBarStyleSmall"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_gravity = "bottom"
+        android:layout_marginStart = "8dp"
+        android:layout_marginTop = "4dp"
+        android:layout_marginEnd = "8dp"
+        android:isIndicator = "true"
+        android:numStars = "5"
+        android:padding = "1dp"
+        android:progressTint = "@color/bs_yellow"
+        android:stepSize = "0.1"
+        app:layout_constraintEnd_toStartOf = "@+id/trip_owner_contact_number"
+        app:layout_constraintHorizontal_bias = "0.333"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@+id/trip_owner_profile_pic_second" />
+
+    <Button
+        android:id = "@+id/profile_btn"
+        android:layout_width = "wrap_content"
+        android:layout_height = "40dp"
+        android:layout_marginStart = "20dp"
+        android:layout_marginTop = "8dp"
+        android:background = "@drawable/btn_trip_details_profile"
+        android:paddingStart = "24dp"
+        android:paddingEnd = "26dp"
+        android:text = "Profile"
+        android:textColor = "#606060"
+        app:layout_constraintStart_toEndOf = "@+id/trip_owner_profile_pic_second"
+        app:layout_constraintTop_toBottomOf = "@+id/trip_owner_contact_number" />
+
+    <Button
+        android:id="@+id/message_btn"
+        android:layout_width = "wrap_content"
+        android:layout_height = "40dp"
+        android:layout_marginStart = "18dp"
+        android:layout_marginTop = "8dp"
+        android:layout_marginEnd = "16dp"
+        android:background = "@drawable/btn_trip_details"
+        android:paddingStart = "26dp"
+        android:paddingEnd = "26dp"
+        android:text = "Message"
+        android:textColor = "#606060"
+        app:layout_constraintBaseline_toBaselineOf="@+id/profile_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile_btn"
+        app:layout_constraintTop_toBottomOf="@+id/trip_owner_contact_number" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/title_user"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="M"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/trip_owner_contact_number"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/trip_owner_profile_pic_second" />-->
+
+    <TextView
+        android:id="@+id/title_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_pro_text"
+        android:text="John Fara"
+        android:textSize="16sp"
+        android:textStyle = "bold"
+        app:layout_constraintStart_toStartOf="@+id/trip_owner_about"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageView2"
+        android:layout_width = "20dp"
+        android:layout_height = "20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/trip_owner_about"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/title_user"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat = "@drawable/check_mark" />
+
+</android.support.constraint.ConstraintLayout>

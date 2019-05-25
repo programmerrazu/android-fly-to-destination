@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:id = "@+id/nested_scroll_view"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:background="#f7f8fb"
+    android:clipToPadding = "false"
+    android:scrollbars = "none"
+    android:scrollingCache = "true">
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:orientation = "vertical"
+        android:padding = "@dimen/spacing_large">
+
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "2dp"
+            android:layout_weight = ".9"
+            android:fontFamily = "@font/sf_pro_text"
+            android:padding = "8dp"
+            android:text = "Verifications"
+            android:textColor = "@color/grey_700"
+            android:textSize="16sp"
+            android:textStyle = "bold" />
+
+
+        <android.support.v7.widget.CardView xmlns:card_view = "http://schemas.android.com/apk/res-auto"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "center"
+            android:layout_margin = "4dp"
+            android:padding = "4dp"
+            card_view:cardCornerRadius = "4dp">
+
+            <LinearLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:orientation = "vertical"
+                android:padding = "8dp">
+
+                <LinearLayout
+                    android:id="@+id/verified_view_email"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:visibility="gone"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding = "8dp"
+                        android:src = "@drawable/ic_check_circle_green" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Verified by Email"
+                        android:textColor = "@color/grey_700"
+                        android:textSize = "16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/unverified_view_email"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exclamation_mark" />
+
+                    <TextView
+                        android:id="@+id/connectEmail"
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Verify your Email"
+                        android:textColor = "@color/blue_400"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/verified_view_facebook"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:visibility = "gone"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding = "8dp"
+                        android:src = "@drawable/ic_check_circle_green" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Verified by Facebook"
+                        android:textColor = "@color/grey_700"
+                        android:textSize = "16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/unverified_view_facebook"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exclamation_mark" />
+
+                    <TextView
+                        android:id="@+id/connectFacebook"
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Connect With Facebook"
+                        android:textColor = "@color/blue_400"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/verified_view_google"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:visibility="gone"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding = "8dp"
+                        android:src = "@drawable/ic_check_circle_green" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Verified by Google"
+                        android:textColor = "@color/grey_700"
+                        android:textSize = "16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/unverified_view_google"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exclamation_mark" />
+
+                    <TextView
+                        android:id="@+id/connectGoogle"
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Connect With Google"
+                        android:textColor = "@color/blue_400"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/verified_view_linkedin"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:visibility="gone"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding = "8dp"
+                        android:src = "@drawable/ic_check_circle_green" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Verified by Linkedin"
+                        android:textColor = "@color/grey_700"
+                        android:textSize = "16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/unverified_view_linkedin"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exclamation_mark" />
+
+                    <TextView
+                        android:id = "@+id/connectLinkedIn"
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Connect With Linkedin"
+                        android:textColor = "@color/blue_400"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/verified_view_phone"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:visibility="gone"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding = "8dp"
+                        android:src = "@drawable/ic_check_circle_green" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Verified Phone Number"
+                        android:textColor = "@color/grey_700"
+                        android:textSize = "16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/unverified_view_phone"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "1">
+
+                    <ImageView
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".1"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exclamation_mark" />
+
+                    <TextView
+                        android:id = "@+id/verifyPhone"
+                        android:layout_width = "0dp"
+                        android:layout_height = "match_parent"
+                        android:layout_weight = ".9"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding = "8dp"
+                        android:singleLine = "true"
+                        android:text = "Verify your phone"
+                        android:textColor = "@color/blue_400"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view = "http://schemas.android.com/apk/res-auto"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "center"
+            android:layout_margin = "4dp"
+            android:padding = "4dp"
+            card_view:cardCornerRadius = "4dp">
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "2dp"
+            android:layout_weight = ".9"
+            android:fontFamily = "@font/sf_pro_text"
+            android:padding = "8dp"
+            android:text = "Trust Points"
+            android:textColor = "@color/grey_700"
+            android:textSize="16sp"
+            android:textStyle = "bold" />
+
+
+
+        <android.support.v7.widget.CardView xmlns:card_view = "http://schemas.android.com/apk/res-auto"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "center"
+            android:layout_margin = "4dp"
+            card_view:cardCornerRadius = "4dp">
+
+            <LinearLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:orientation = "vertical"
+                android:padding="16dp"
+                android:weightSum = "6">
+
+                <!--<LinearLayout-->
+                <!--android:layout_width = "match_parent"-->
+                <!--android:layout_height = "wrap_content"-->
+                <!--android:orientation = "horizontal"-->
+                <!--android:weightSum = "3">-->
+
+                <!--<TextView-->
+                <!--android:layout_width = "0dp"-->
+                <!--android:layout_height = "match_parent"-->
+                <!--android:layout_weight = "1.8"-->
+                <!--android:background = "@color/mdtp_white"-->
+                <!--android:fontFamily = "@font/tahoma_regular_font"-->
+                <!--android:padding="4dp"-->
+                <!--android:text = "Task"-->
+                <!--android:textColor = "@color/orange_900"-->
+                <!--android:textSize="16sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width = "0dp"-->
+                <!--android:layout_height = "match_parent"-->
+                <!--android:layout_weight = ".6"-->
+                <!--android:background = "@color/mdtp_white"-->
+                <!--android:fontFamily = "@font/tahoma_regular_font"-->
+                <!--android:gravity = "center"-->
+                <!--android:padding="4dp"-->
+                <!--android:text = "Points"-->
+                <!--android:textColor = "@color/orange_900"-->
+                <!--android:textSize="16sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width = "0dp"-->
+                <!--android:layout_height = "match_parent"-->
+                <!--android:layout_weight = ".6"-->
+                <!--android:background = "@color/mdtp_white"-->
+                <!--android:fontFamily = "@font/tahoma_regular_font"-->
+                <!--android:gravity = "center"-->
+                <!--android:padding="4dp"-->
+                <!--android:text = "Status"-->
+                <!--android:textColor = "@color/orange_900"-->
+                <!--android:textSize="16sp" />-->
+
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "3">
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = "1.8"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:singleLine="true"
+                        android:padding="2dp"
+                        android:text = "Upload File Photo"
+                        android:textColor = "@color/grey_700"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/tahoma_regular_font"
+                        android:gravity = "center"
+                        android:padding="2dp"
+                        android:text = "20"
+                        android:textColor = "@color/orange_900"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/verified_status_pic"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:visibility="gone"
+                        android:background = "@color/mdtp_white"
+                        android:padding="4dp"
+                        android:src = "@drawable/ic_check_circle_green"
+                         />
+
+                    <TextView
+                        android:id="@+id/verified_status_pic_false"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:gravity = "center"
+                        android:padding = "2dp"
+                        android:src="@drawable/ic_exclamation_mark"
+                        android:text = "@string/earn"
+                        android:textAllCaps="false"
+                        android:textColor = "@color/orange_900"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "3">
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = "1.8"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:singleLine="true"
+                        android:padding="2dp"
+                        android:text = "Complete Basic Info"
+                        android:textColor = "@color/grey_700"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/tahoma_regular_font"
+                        android:gravity = "center"
+                        android:padding="2dp"
+                        android:text = "15"
+                        android:textColor = "@color/orange_900"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/verified_status_basic_true"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:padding="4dp"
+                        android:src = "@drawable/ic_check_circle_green"
+                        android:visibility = "gone" />
+
+                    <TextView
+                        android:id="@+id/verified_status_basic_false"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:gravity = "center"
+                        android:padding = "2dp"
+                        android:src="@drawable/ic_exclamation_mark"
+                        android:text = "@string/earn"
+                        android:textAllCaps="false"
+                        android:textColor = "@color/orange_900"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "3">
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = "1.8"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:singleLine="true"
+                        android:padding="2dp"
+                        android:text = "Complete Profile Info"
+                        android:textColor = "@color/grey_700"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/tahoma_regular_font"
+                        android:gravity = "center"
+                        android:text = "20"
+                        android:padding="2dp"
+                        android:textColor = "@color/orange_900"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/verified_status_profile_true"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:padding="4dp"
+                        android:src = "@drawable/ic_check_circle_green"
+                        android:visibility = "gone" />
+
+                    <TextView
+                        android:id="@+id/verified_status_profile_false"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:padding="2dp"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:gravity = "center"
+                        android:src="@drawable/ic_exclamation_mark"
+                        android:text = "@string/earn"
+                        android:textAllCaps = "false"
+                        android:textColor = "@color/orange_900"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "3">
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = "1.8"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:singleLine="true"
+                        android:padding="2dp"
+                        android:text = "Add Interest and About"
+                        android:textColor = "@color/grey_700"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/tahoma_regular_font"
+                        android:gravity = "center"
+                        android:padding="2dp"
+                        android:text = "15"
+                        android:textColor = "@color/orange_900"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/verified_status_interest_true"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:padding="4dp"
+                        android:src = "@drawable/ic_check_circle_green"
+                        android:visibility = "gone" />
+
+                    <TextView
+                        android:id="@+id/verified_status_interest_false"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:gravity = "center"
+                        android:padding = "2dp"
+                        android:src="@drawable/ic_exclamation_mark"
+                        android:text = "@string/earn"
+                        android:textAllCaps = "false"
+                        android:textColor = "@color/orange_900"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "3">
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = "1.8"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding="2dp"
+                        android:singleLine="true"
+                        android:text = "Verify Phone Number"
+                        android:textColor = "@color/grey_700"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/tahoma_regular_font"
+                        android:gravity = "center"
+                        android:padding="2dp"
+                        android:text = "20"
+                        android:textColor = "@color/orange_900"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/verified_status_phone_true"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:padding="4dp"
+                        android:visibility = "gone"
+                        android:background = "@color/mdtp_white"
+                        android:src = "@drawable/ic_check_circle_green" />
+
+                    <TextView
+                        android:id="@+id/verified_status_phone_false"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:gravity = "center"
+                        android:padding = "2dp"
+                        android:src="@drawable/ic_exclamation_mark"
+                        android:text = "@string/earn"
+                        android:textAllCaps = "false"
+                        android:textColor = "@color/orange_900"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:orientation = "horizontal"
+                    android:weightSum = "3">
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = "1.8"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:padding="2dp"
+                        android:singleLine = "true"
+                        android:text = "Connect Any Social Account"
+                        android:textColor = "@color/grey_700"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width = "0dp"
+                        android:layout_height = "wrap_content"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:fontFamily = "@font/tahoma_regular_font"
+                        android:gravity = "center"
+                        android:padding="2dp"
+                        android:text = "15"
+                        android:textColor = "@color/orange_900"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/verified_status_social_true"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:background = "@color/mdtp_white"
+                        android:padding="4dp"
+                        android:visibility = "gone"
+                        android:src = "@drawable/ic_check_circle_green" />
+
+                    <TextView
+                        android:id="@+id/verified_status_social_false"
+                        android:layout_width = "0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin = "2dp"
+                        android:layout_weight = ".6"
+                        android:clickable = "true"
+                        android:focusable = "true"
+                        android:fontFamily = "@font/sf_pro_text"
+                        android:gravity = "center"
+                        android:padding = "2dp"
+                        android:src="@drawable/ic_exclamation_mark"
+                        android:text = "@string/earn"
+                        android:textAllCaps = "false"
+                        android:textColor = "@color/orange_900"
+                        android:textSize = "16sp"
+                        android:textStyle = "bold" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
